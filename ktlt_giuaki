@@ -1,0 +1,78 @@
+#include<iostream>
+using namespace std;
+int main(){
+  string ten,espresso,lattemocchiato,flatwhite,americano;
+  int value1,value2,value3,value4,
+  espresso_price,latte_price,flat_price,americano_price;
+  cout<<"-----------Coffee Menu----------"<<endl;
+  cout<<"   1.    Expresso – 30K "<<endl;
+  cout<<"   2.    Latte Machiato – 35K"<<endl;
+  cout<<"   3.    Flat white – 35K"<<endl;
+  cout<<"   4.    Americano – 40K"<<endl;
+  cout<<"--------------------------------" << endl;
+  cout<<"Nhập tên khách hàng: ";
+  cin>>ten;
+  cout<<"Xin chào quý khách "<<ten<<" đã đến với quán cà phê da đen. "<<endl<<endl;
+  espresso:
+  cout<<"Bạn có muốn order Espresso không ? - ";
+  cin>>espresso;
+  if(espresso == "có" || espresso == "Có" || espresso == "co" || espresso == "Co"){
+    cout<<"Số lượng Espresso order là: ";
+    cin>>value1;
+    espresso_price = value1 * 30;
+    cout<<"Số tiền khách hàng phải trả là: "<<espresso_price<<"K"<<endl<<endl;
+  }else if(espresso == "không" || espresso == "Không" || espresso == "khong" || espresso == "Khong"){
+    cout<<"Khách hàng không order Espresso\n\n";
+    espresso_price = 0;
+  }else{
+    cout<<"Khách hàng nhập sai vui lòng nhập lại\n\n";
+    goto espresso;
+  }
+  lattemocchiato:
+  cout<<"Bạn có muốn order Latte Mocchiato không ? - ";
+  cin>>lattemocchiato;
+  if(lattemocchiato == "có" || lattemocchiato == "Có" || lattemocchiato == "co" || lattemocchiato == "Co"){
+    cout<<"Số lượng Latte Mocchiato order là: ";
+    cin>>value2;
+    latte_price = value2 * 35;
+    cout<<"Số tiền khách hàng phải trả là: "<<latte_price<<"K"<<endl<<endl;
+  }else if(lattemocchiato == "không" || lattemocchiato == "Không" || lattemocchiato == "khong" || lattemocchiato == "Khong"){
+    cout<<"Khách hàng không order Latte Mocchiato\n\n";
+    latte_price = 0;
+  }else{
+    cout<<"Khách hàng nhập sai vui lòng nhập lại\n\n";
+    goto lattemocchiato;
+  }
+  flatwhite:
+  cout<<"Bạn có muốn order Flat White không ? - ";
+  cin>>flatwhite;
+  if(flatwhite == "có" || flatwhite == "Có" || flatwhite == "co" || flatwhite == "Co"){
+    cout<<"Số lượng Flat White order là: ";
+    cin>>value3;
+    flat_price = value3 * 35;
+    cout<<"Số tiền khách hàng phải trả là: "<<flat_price<<"K"<<endl<<endl;
+  }else if(flatwhite == "không" || flatwhite == "Không" || flatwhite == "khong" || flatwhite == "Khong"){
+    cout<<"Khách hàng không order Flat White\n\n";
+    flat_price = 0;
+  }else{
+    cout<<"Khách hàng nhập sai vui lòng nhập lại\n\n";
+    goto flatwhite;
+  }
+  americano:
+  cout<<"Bạn có muốn order Americano không ? - ";
+  cin>>americano;
+  if(americano == "có" || americano == "Có" || americano == "co" || americano == "Co"){
+    cout<<"Số lượng Americano order là: ";
+    cin>>value4;
+    americano_price = value4 * 40;
+    cout<<"Số tiền khách hàng phải trả là: "<<americano_price<<"K"<<endl<<endl;
+  }else if(americano == "không" || americano == "Không" || americano == "khong" || americano == "Khong"){
+    cout<<"Khách hàng không order Americano\n\n";
+    americano_price = 0;
+  }else{
+    cout<<"Khác hàng nhập sai vui lòng nhập lại\n\n";
+    goto americano;
+  }
+  cout<<"Tổng thành tiền: "<<espresso_price + latte_price + flat_price + americano_price<<"K"<<endl;
+  return 0;
+}
